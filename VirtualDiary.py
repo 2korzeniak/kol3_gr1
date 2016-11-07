@@ -20,6 +20,7 @@ class VirtualDiary(object):
         self._classes = groupby(self._students, lambda s: s.class_id)
         for class_id, students in self._classes:
             print "    Class " + class_id + ": " + str(sum(s.attendance for s in students))
+            
 
     def average_by_class(self):
         self._classes = groupby(self._students, lambda s: s.class_id)
